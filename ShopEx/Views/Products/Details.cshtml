@@ -1,0 +1,56 @@
+﻿@model ShopEx.Models.Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Products</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PageName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShopExpertpageLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShopExpertpageLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pageId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pageId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.information)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.information)
+        </dd>
+
+       
+
+       
+
+        
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

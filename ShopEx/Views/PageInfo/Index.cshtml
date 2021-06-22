@@ -1,0 +1,105 @@
+﻿@model IEnumerable<ShopEx.Models.PageInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageOwnerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnerAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnersNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageFbLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageWebsite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Delivery)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfirmPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageOwnerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnersNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageFbLink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageWebsite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Delivery)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Picture)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PageId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PageId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PageId })
+        </td>
+    </tr>
+}
+
+</table>

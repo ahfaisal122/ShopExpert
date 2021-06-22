@@ -1,0 +1,102 @@
+﻿/* footer section */
+
+/* footer-top */
+.footer-top {
+    position: relative;
+    background-color: #e2e2e2;
+    color: #c5c5c5;
+    padding: 55px 0 55px;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+}
+/* Footer */
+.footer {
+    position: relative;
+    background-color: #e2e2e2;
+    color: #696969;
+    padding: 55px 0 40px;
+}
+
+    .footer h5 {
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        color: #696969;
+        position: relative;
+        padding-bottom: 16px;
+    }
+
+        .footer h5:after {
+            content: '';
+            display: block;
+            margin: 5px 0 0;
+            width: 40%;
+            height: 1px;
+            background-color: #696969;
+        }
+
+    .footer ul {
+        list-style: none;
+        line-height: 2.2em;
+        padding-left: 0px;
+    }
+
+        .footer ul a {
+            color: #696969;
+        }
+
+            .footer ul a:hover {
+                color: #e8500e;
+                
+            }
+/*footer bottom */
+.footer-bottom {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid #e8500e;
+    background: #d1d1d1;
+}
+
+.copyright-text p {
+    color: #696969;
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+/*footer-social icon */
+.bigpixi-footer-social {
+    margin-left: auto;
+    margin-top: 8px;
+}
+
+.bigpixi-footer-social__list-item {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.bigpixi-footer__icon-link {
+    display: inline-block;
+    -webkit-transition: 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+}
+
+.bigpixi-footer-social__icon {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+    border: 1px solid #696969;
+    border-radius: 20px;
+}
+
+    .bigpixi-footer-social__icon:hover {
+        display: inline-block;
+        padding: 2px;
+        transition: .75s;
+        background: #fff;
+    }

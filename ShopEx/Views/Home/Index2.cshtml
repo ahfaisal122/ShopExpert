@@ -1,0 +1,34 @@
+﻿@using Microsoft.AspNet.Identity
+@using ShopEx.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@using (ApplicationDbContext db = new ApplicationDbContext())
+{
+
+    var ff = User.Identity.GetUserId().ToString();
+    var query = (from st in db.PageAccount
+                 where st.OwnersEmail==ff
+                 select st).ToList();
+
+
+    foreach (var a in query)
+    {
+        @Html.ActionLink("Go To Your Page", "OwnerPageView", "PageInfo", new {id = @a.PageId}, new {id = @a.PageId, value = @a.PageId })
+    }
+    }
+    
+<h2><img src="~/Images/Sale.gif" style="width: 100%; height: 80px;"></h2>
+@Html.Partial("_Slider")
+@Html.Partial("Advertise")
+@Html.Partial("Advertise2")
+
+
+
+
+@Html.Partial("footer")
+
+
+

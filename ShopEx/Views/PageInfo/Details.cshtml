@@ -1,0 +1,122 @@
+﻿@model ShopEx.Models.PageInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PageInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageOwnerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageOwnerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnersNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnersNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageFbLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageFbLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageWebsite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageWebsite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Delivery)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delivery)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PageId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,237 @@
+﻿
+@model ShopEx.Models.PageInfo
+
+@{
+    ViewBag.Title = "OwnerReg";
+}
+
+
+
+<link href="~/Content/form.css" rel="stylesheet" />
+
+
+<br />
+
+<br />
+<br />
+<br />
+<div>
+    <cneter>Owner Registration Form</cneter>
+
+    <div class="container">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="p" class="col-sm-3 control-label">Page Name</label>
+                <div class="col-sm-9">
+                    <input type="text" id="pgName" placeholder="Page Name" class="form-control" autofocus>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="PageName" class="col-sm-3 control-label">Page Name</label>
+                <div class="col-sm-9">
+                    <input type="text" id="pgName" placeholder="Page Name" class="form-control" autofocus>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="col-sm-3 control-label">Password</label>
+                <div class="col-sm-9">
+                    <input type="password" id="password" placeholder="Password" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Name" class="col-sm-3 control-label">Page Owner Name</label>
+                <div class="col-sm-9">
+                    <input type="text" id="ownertName" placeholder="owner Name" class="form-control" autofocus>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address" class="col-sm-3 control-label">Address</label>
+                <div class="col-sm-9">
+                    <input type="text" id="address" placeholder="Address" class="form-control" autofocus>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="contact" class="col-sm-3 control-label">Contact No.</label>
+                <div class="col-sm-9">
+                    <input type="text" id="contact" placeholder="Contact no" class="form-control" autofocus>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="aboutPage" class="col-sm-3 control-label">About Page</label>
+                <div class="col-sm-9">
+                    <input type="text" id="aboutpage" placeholder="About page" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pglink" class="col-sm-3 control-label">Page Link</label>
+                <div class="col-sm-9">
+                    <input type="text" id="pglink" placeholder="Page Link" class="form-control" autofocus>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="weblink" class="col-sm-3 control-label">Website Link(if have any)</label>
+                <div class="col-sm-9">
+                    <input type="text" id="weblink" placeholder="Website Link" class="form-control" autofocus>
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="col-sm-3 control-label">A file upload button without icon</label>
+                <div class="col-sm-9">
+                    <input type="file" class="filestyle" data-icon="false">
+                </div>
+            </div>
+
+
+
+            <!--  <div class="form-group">
+                <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                <div class="col-sm-9">
+                    <input type="date" id="birthDate" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country" class="col-sm-3 control-label">Country</label>
+                <div class="col-sm-9">
+                    <select id="country" class="form-control">
+                        <option>Afghanistan</option>
+                        <option>Bahamas</option>
+                        <option>Cambodia</option>
+                        <option>Denmark</option>
+                        <option>Ecuador</option>
+                        <option>Fiji</option>
+                        <option>Gabon</option>
+                        <option>Haiti</option>
+                    </select>
+                </div>
+            </div> <!-- /.form-group -->
+
+            <div class="form-group">
+                <label class="control-label col-sm-3">Preference</label>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input type="radio" id="femaleRadio" value="Female">Female
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input type="radio" id="maleRadio" value="Male">Male
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input type="radio" id="uncknownRadio" value="Both">Both
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /.form-group -->
+            <div class="form-group">
+                <label class="control-label col-sm-3">Category</label>
+                <div class="col-sm-9">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="cloths" value="Cloths">Cloths
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="makeups" value="Makeups">Makeups
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="accessories" value="Accessories">Accessories
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="foods" value="Foods">Foods
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="electronics" value="Electronics">Electronics
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="craftZone" value="Craft zone">Craft zone
+                        </label>
+                    </div>
+                </div>
+            </div> <!-- /.form-group -->
+
+            <div class="form-group">
+                <label class="control-label col-sm-3">Payment Type</label>
+                <div class="col-sm-9">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="bkash" value="bkash">bkash
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="card" value="card">Visa Card
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="cash" value="cash">Cash On Delivery
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3">Delivery Availability</label>
+                <div class="col-sm-9">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="Inside_Dhaka" value="Inside Dhaka">Inside Dhaka
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="outSideDhaka" value="outside dhaka">Outside Dhaka
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">I accept <a href="#">terms</a>
+                        </label>
+                    </div>
+                </div>
+            </div> <!-- /.form-group -->
+            <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3">
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </div>
+            </div>
+        </form> <!-- /form -->
+    </div>
+    <!-- ./container -->
+</div>
+

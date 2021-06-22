@@ -1,0 +1,119 @@
+﻿@model ShopEx.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" , enctype = "multipart/form-data" }))
+{
+
+
+
+
+    @Html.AntiForgeryToken()
+  
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+   <div class="form-horizontal">
+        <h4> @Session["ShopExpertId"]</h4>
+        <hr />
+        <div class="container">
+            <div class="row">
+                <center><h2 text-algin="center">Register With Us & Enjoy Online Shopping!</h2></center>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="form-body">
+                        <ul class="nav nav-tabs final-login">
+                            <li class="active"><a data-toggle="tab" href="#sectionA">Sign Up</a></li>
+                            <li><a data-toggle="active" href="/Account/Login">Sign In</a></li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div id="sectionA" class="tab-pane fade in active">
+                                <div class="innter-form">
+                                    <form class="sa-innate-form" method="post">
+
+
+
+
+                                        @Html.LabelFor(m => m.ShopExpertId, new { @class = "col-md-2 control-label" })
+                                        @Html.EditorFor(model => model.ShopExpertId, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ShopExpertId, "", new { @class = "text-danger" })
+
+
+
+
+
+                                        <p>
+                                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
+                                        </p>
+
+
+
+
+
+
+
+
+
+                                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                                        @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                        @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+
+                                        @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                        <br />
+                                        <br />
+
+                                        <div>
+                                           
+                                            <label class="radio-inline">
+                                                <input type="radio" name="Gender" id="male" value="PageOwner"> PageOwner
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="Gender" id="female" value="User"> User
+                                            </label>
+                                        </div>
+
+
+
+                                        <br />
+                                        <br />
+                                        <input type="hidden" name="utype" value="User" id="User">
+                                        <button type="submit" style="background-color: #ff0000; align-self: center"> JOIN NOW </button>
+                                        <br />
+                                        <br />
+
+                                    <p>By clicking Join now, you agree to ShopExperts User Agreement, Privacy Policy, and Cookie Policy.</p>
+                                    <div class="clearfix"></div>
+                                    @Html.Partial("_SocialLogin")
+                                    </form>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

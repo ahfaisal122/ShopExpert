@@ -1,0 +1,24 @@
+﻿using Shop.Models.Advertise1
+@model  IEnumerable<Shop.Models.Advertise1>
+
+@{
+    ViewBag.Title = "_Slider1";
+}
+
+<h2>@ViewBag.Oishee</h2>
+
+@foreach (var item in Model)
+{
+    byte[] b=item.Adphoto;
+   /* ViewBag.Title = "_Slider";
+    //byte[] byteData = System.IO.File.ReadAllBytes(item.Adphoto);
+    //Convert byte arry to base64string*/
+    string imreBase64Data = Convert.ToBase64String(item.Adphoto);
+    string imgDataURL = string.Format("data:image/png;base64,{0}", imreBase64Data);
+
+    ViewBag.ImageData = imgDataURL;
+}
+<div class="item active">
+    Please Contact us for further information.
+    Contact No: 017833*****
+</div>

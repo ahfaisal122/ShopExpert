@@ -1,0 +1,31 @@
+﻿
+@using ShopEx.Models
+@model IEnumerable<ShopEx.Models.Cat>
+
+@{
+    ViewBag.Title = "Check2";
+    
+}
+
+
+@using (ApplicationDbContext db = new ApplicationDbContext())
+{
+
+    // var ff=Model[0].
+    // <p>@ViewBag.id</p>
+    // <h2>@TempData["id"]</h2>
+    var aa="Clothes";
+
+    foreach (var a in Model)
+    {
+
+        aa = a.CategoryId.ToString();
+    }
+    var query = (from st in db.PageAccount
+             where st.Cats.Any(c => c.CategoryId == aa)
+             select st).ToList();
+   
+    
+
+
+}

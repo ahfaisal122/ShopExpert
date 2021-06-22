@@ -1,0 +1,74 @@
+﻿@using ShopEx.Models
+
+@{
+    ViewBag.Title = "Check";
+}
+
+
+@using (ApplicationDbContext db = new ApplicationDbContext())
+{
+
+    var ff = TempData["id"].ToString();
+    // <p>@ViewBag.id</p>
+    // <h2>@TempData["id"]</h2>
+
+    var query = (from st in db.PageAccount
+                 where st.Cats.Any(c => c.CategoryId == ff)
+                 select st).ToList();
+<link href="~/Stylesheet/categoryStyle.css" rel="stylesheet" />
+
+    <div class="container">
+
+        <h2></h2>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12" style="">
+                <div class="panel panel-default list-group-panel">
+                    <div class="panel-body">
+                        <ul class="list-group list-group-header">
+                            <li class="list-group-item list-group-body" style="background:#ffea00">
+                                <div class="row">
+                                    <div class="col-xs-6 text-left">Page Name</div>
+                                    <div class="col-xs-3">Page Name</div>
+
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-group list-group-body" style="">
+                            <li class="list-group-item">
+                                <div class="row">
+
+
+
+
+                                    @foreach (var a in query)
+                                    {
+
+
+                                        <div class="col-xs-6 text-left" style="">
+                                            <a>
+                                                <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                                                @Html.ActionLink(a.PageName, "PageInformation", "PageInfo", new { id = @a.PageId }, new { id = @a.PageId, value = @a.PageId })
+                                                <p>  @Html.Partial("Rating") </p>
+                                            </a>
+                                        </div>
+
+                                        //  <div class="col-xs-3" style="">@Html.Partial("Rating")</div>
+                                    }
+
+
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
